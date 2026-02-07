@@ -1,6 +1,52 @@
 Invoice Management System — Backend
 It provides authentication, dashboard, and full CRUD APIs for managing invoices. Built using Node.js, Express, Prisma, MySQL, Bcrypt, and Json Web Token.
 
+## Folder Structure fo the project
+
+  Backend/
+  │
+  ├── prisma/
+  │   ├── migrations/
+  │   └── schema.prisma
+  │
+  ├── src/
+  │   │
+  │   ├── config/
+  │   │   ├── prismaClient.js
+  │   │   └── serverConfig.js
+  │   │
+  │   ├── controllers/
+  │   │   ├── authController.js
+  │   │   ├── dashboardController.js
+  │   │   └── invoiceController.js
+  │   │
+  │   ├── middlewares/
+  │   │   ├── authInputValidationMiddleware.js
+  │   │   ├── invoiceInputValidationMiddleware.js
+  │   │   └── jwtAuthMiddleware.js
+  │   │
+  │   ├── routes/
+  │   │   ├── authRoutes.js
+  │   │   ├── dashboardRoutes.js
+  │   │   ├── invoiceRoutes.js
+  │   │   └── index.js
+  │   │
+  │   ├── services/
+  │   │   ├── authService.js
+  │   │   ├── dashboardService.js
+  │   │   └── invoiceService.js
+  │   │
+  │   ├── utils/
+  │   │   └── helper.js
+  │   │
+  │   └── index.js
+  │
+  ├── .env
+  ├── .gitignore
+  ├── package.json
+  └── package-lock.json
+
+
 ## 1. Clone and Run the Project
 open terminal and run following commands:
     git clone https://github.com/gaganbedi771/Invoice-Management-System.git
