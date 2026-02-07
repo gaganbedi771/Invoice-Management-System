@@ -1,11 +1,13 @@
 
 generator client {
-  provider = "prisma-client"
+  provider = "prisma-client-js"
 }
 
 datasource db {
   provider = "mysql"
+  url      = env("DATABASE_URL")
 }
+
 
 model User{
   id Int @id @default(autoincrement()) 
@@ -18,9 +20,8 @@ enum InvoiceStatus {
   UNPAID
 }
 
-model Invoice { 
-  id Int @id @default(autoincrement()) 
-  invoiceNumber String @unique 
+model Invoice {  
+  invoiceNumber Int @id @default(autoincrement()) 
   customerName String 
   amount Float 
   date DateTime 
