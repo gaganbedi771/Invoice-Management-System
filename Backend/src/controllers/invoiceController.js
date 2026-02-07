@@ -47,7 +47,6 @@ exports.delete = async (req, res) => {
 
     res.status(201).json({
       success: true,
-      data: true,
     });
   } catch (error) {
     console.log("Invoice Controller error", error);

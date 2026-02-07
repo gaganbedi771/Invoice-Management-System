@@ -25,7 +25,7 @@ exports.signup = async (email, password) => {
       },
     });
 
-    return user;
+    return { id: user.id, email: user.email };
   } catch (error) {
     console.log("Error in Auth service", error);
     throw error;

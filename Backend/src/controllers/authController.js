@@ -21,7 +21,7 @@ exports.signin = async (req, res) => {
   try {
     const { email, password } = req.body;
     const user = await AuthService.signin(email, password);
-    res.status(201).json({
+    res.status(200).json({
       success: true,
       data: user,
     });
