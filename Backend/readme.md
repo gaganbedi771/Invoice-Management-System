@@ -52,13 +52,13 @@ open terminal and run following commands:
     git clone https://github.com/gaganbedi771/Invoice-Management-System.git
     cd Backend
     npm install
-    npx prisma generate
 
 create "env" file as Backend/.env and put following variables (change username and password to system specific)
-    PORT=<port number>
+    PORT=3001
     DATABASE_URL=<mysql://username:password@localhost:3306/invoice_db>
     JWT_SECRET=<some secret key>
 Run following command:
+    npx prisma migrate dev
     npm start
 
 A default admin user is already created:
